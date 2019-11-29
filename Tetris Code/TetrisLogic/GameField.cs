@@ -114,5 +114,20 @@ namespace TetrisLogic
             if (Game && parKey == Keys.Down)
                 Piece.Speed = 0.35f;
         }
+
+        /// <summary>
+        /// Resetting the playing field
+        /// </summary>
+        public static void Reset()
+        {
+            color = Color.White;
+            for (int i = 0; i < WIDTH; i++)
+                for (int j = 0; j < HEIGHT; j++)
+                    matrix[i, j] = false;
+            Game = true;
+            GameOver = false;
+            Up = false;
+            Piece.Reset(WIDTH);
+        }
     }
 }

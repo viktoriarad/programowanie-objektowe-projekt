@@ -53,6 +53,11 @@ namespace TetrisLogic
         private static Panel panelPause;
 
         /// <summary>
+        /// Player name input field
+        /// </summary>
+        private static Input userName;
+
+        /// <summary>
         /// Graphics size
         /// </summary>
         public static Size GraphicsSize { get; set; }
@@ -76,6 +81,62 @@ namespace TetrisLogic
         /// Scores
         /// </summary>
         public static List<KeyValuePair<string, int>> Scores { get; set; }
+
+        /// <summary>
+        /// Receive character from keyboard
+        /// </summary>
+        /// <param name="parChar">Character</param>
+        public static void KeyChar(char parChar)
+        {
+            userName.Push(parChar);
+        }
+
+        /// <summary>
+        /// Game start
+        /// </summary>
+        public static void StartGame()
+        {
+            userName.Text = "";
+            ScoresVisible = false;
+            buttonPause.Text = "Pause";
+            GameField.Reset();
+        }
+
+        /// <summary>
+        /// Adding a highscore
+        /// </summary>
+        private static void AddScore()
+        {
+            string name = userName.Text == "" ? "Anonymous" : userName.Text;
+            if (Scores.Count == 0 || Score <= Scores[Scores.Count - 1].Value)
+                Scores.Add(new KeyValuePair<string, int>(name, Score));
+            else
+                for (int i = Scores.Count - 1; i >= 0; i--)
+                {
+                    if (Score <= Scores[i].Value)
+                    {
+                        Scores.Insert(i, new KeyValuePair<string, int>(name, Score));
+                        break;
+                    }
+                    if (Score > Scores[0].Value)
+                    {
+                        Scores.Insert(0, new KeyValuePair<string, int>(name, Score));
+                        break;
+                    }
+                }
+        }
+
+        /// <summary>
+        /// High scores
+        /// </summary>
+        private static void ShowScores()
+        {
+            ScoresVisible = true;
+            PauseVisible = false;
+            if (GameField.GameOver)
+                AddScore();
+            GameField.Reset();
+        }
 
         /// <summary>
         /// Quit the game
@@ -103,6 +164,16 @@ namespace TetrisLogic
                 PauseVisible = false;
                 buttonPause.Text = "Pause";
             }
+        }
+
+        /// <summary>
+        /// Restart
+        /// </summary>
+        private static void Restart()
+        {
+            if (GameField.GameOver)
+                AddScore();
+            GameField.Reset();
         }
 
         /// <summary>
@@ -136,6 +207,16 @@ namespace TetrisLogic
         public static void MousePos(Point parPos)
         {
             mousePos = parPos;
+        }
+
+        /// <summary>
+        /// Keyboard handling
+        /// </summary>
+        /// <param name="parKey">Key</param>
+        public static void KeyDown(Keys parKey)
+        {
+            if (parKey == Keys.Back)
+                userName.Backspace();
         }
 
         /// <summary>
