@@ -188,5 +188,43 @@ namespace TetrisLogic
             return result;
         }
 
+        /// <summary>
+        /// Lowest cell
+        /// </summary>
+        /// <returns></returns>
+        public static int MaxY()
+        {
+            int max = points[numPoints][0].Y;
+            foreach (var elPoint in points[numPoints])
+                if (elPoint.Y > max)
+                    max = elPoint.Y;
+            return max + 1;
+        }
+
+        /// <summary>
+        /// Rightmost cell
+        /// </summary>
+        /// <returns></returns>
+        public static int MaxX()
+        {
+            int max = points[numPoints][0].X;
+            foreach (var elPoint in points[numPoints])
+                if (elPoint.X > max)
+                    max = elPoint.X;
+            return max + 1;
+        }
+
+        /// <summary>
+        /// Reset
+        /// </summary>
+        /// <param name="parWidth">Game board width</param>
+        public static void Reset(int parWidth)
+        {
+            Position = new Point(parWidth / 2 - MaxX() / 2, -MaxY() + 1);
+            Speed = 0.015f;
+            dPosition = new PointF(Position.X, Position.Y - 300);
+            points = pointsVariants[random.Next(0, pointsVariants.Length)];
+            numPoints = random.Next(0, points.Length);
+        }
     }
 }
