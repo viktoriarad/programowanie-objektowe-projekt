@@ -226,5 +226,60 @@ namespace TetrisLogic
             points = pointsVariants[random.Next(0, pointsVariants.Length)];
             numPoints = random.Next(0, points.Length);
         }
+
+        /// <summary>
+        /// Overflow check
+        /// </summary>
+        /// <param name="refMatrix">Matrix of game board</param>
+        /// <returns></returns>
+        public static bool Stop(bool[,] refMatrix)
+        {
+            bool result = false;
+            foreach (var elPoint in points[numPoints])
+                if (Position.Y + elPoint.Y < 0)
+                    result = true;
+                else
+                {
+                    if (Position.Y + elPoint.Y < refMatrix.GetLength(1))
+                        refMatrix[(int)(Position.X + elPoint.X), (int)(Position.Y + elPoint.Y)] = true;
+                }
+            return result;
+        }
+
+        /// <summary>
+        /// Tetris figure updates
+        /// </summary>
+        /// <param name="refMatrix">Matrix of game board</param>
+        /// <param name="refGraphics">Graphics></param>
+        /// <param name="parCellSize">Graphics size</param>
+        public static void Update(bool[,] refMatrix, Graphics refGraphics, SizeF parCellSize)
+        {
+            dPosition.X += (((int)(Position.X + 3) - 3) - (dPosition.X / parCellSize.Width)) / 1.5f * parCellSize.Width;
+            dPosition.Y += (((int)(Position.Y + 3) - 3) - (dPosition.Y / parCellSize.Height)) / 3 * parCellSize.Height;
+
+            EndAnim = (Position.Y / parCellSize.Width - dPosition.Y < 0.1f);
+
+            for (int i = 0; i < points[numPoints].Length; i++)
+            {
+                refGraphics.FillRectangle(Brushes.White,
+                  dPosition.X + (points[numPoints][i].X * parCellSize.Width) + parCellSize.Width * 0.05f,
+                  dPosition.Y + (points[numPoints][i].Y * parCellSize.Height) + parCellSize.Height * 0.05f,
+                  parCellSize.Width * 0.9f, parCellSize.Width * 0.9f);
+            }
+
+            if (rot == 1)
+                if (CanRight(refMatrix, Position, points))
+                {
+                    Position = new PointF(Position.X + 1, Position.Y);
+                    rot = 0;
+                }
+
+            if (rot == -1)
+                if (CanLeft(refMatrix, Position, points))
+                {
+                    Position = new PointF(Position.X - 1, Position.Y);
+                    rot = 0;
+                }
+        }
     }
 }
