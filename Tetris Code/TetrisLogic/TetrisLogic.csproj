@@ -43,7 +43,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Button.cs" />
     <Compile Include="Input.cs" />
+    <Compile Include="Panel.cs" />
     <Compile Include="Renderer.cs" />
     <Compile Include="GameField.cs" />
     <Compile Include="Piece.cs" />
