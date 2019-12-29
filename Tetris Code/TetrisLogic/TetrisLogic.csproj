@@ -44,12 +44,23 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Button.cs" />
+    <Compile Include="GameCanvas.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="GameCanvas.Designer.cs">
+      <DependentUpon>GameCanvas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Input.cs" />
     <Compile Include="Panel.cs" />
     <Compile Include="Renderer.cs" />
     <Compile Include="GameField.cs" />
     <Compile Include="Piece.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="GameCanvas.resx">
+      <DependentUpon>GameCanvas.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
