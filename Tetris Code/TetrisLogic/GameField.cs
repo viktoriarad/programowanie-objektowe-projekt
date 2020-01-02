@@ -77,6 +77,21 @@ namespace TetrisLogic
         }
 
         /// <summary>
+        /// Resetting the playing field
+        /// </summary>
+        public static void Reset()
+        {
+            color = Color.White;
+            for (int i = 0; i < WIDTH; i++)
+                for (int j = 0; j < HEIGHT; j++)
+                    matrix[i, j] = false;
+            Game = true;
+            GameOver = false;
+            Up = false;
+            Piece.Reset(WIDTH);
+        }
+
+        /// <summary>
         /// Game board update
         /// </summary>
         /// <param name="refGraphics">Graphics</param>
@@ -139,6 +154,18 @@ namespace TetrisLogic
             prewTime = DateTime.Now.Ticks;
         }
 
+
+        /// <summary>
+        /// Shift cells when deleting a row
+        /// </summary>
+        /// <param name="parNum">Number of steps</param>
+        private static void MoveDown(int parNum)
+        {
+            for (int z = parNum; z > 0; z--)
+                for (int y = 0; y < matrix.GetLength(0); y++)
+                    matrix[y, z] = matrix[y, z - 1];
+        }
+
         /// <summary>
         /// Search for filled strings
         /// </summary>
@@ -159,17 +186,6 @@ namespace TetrisLogic
         }
 
         /// <summary>
-        /// Shift cells when deleting a row
-        /// </summary>
-        /// <param name="parNum">Number of steps</param>
-        private static void MoveDown(int parNum)
-        {
-            for (int z = parNum; z > 0; z--)
-                for (int y = 0; y < matrix.GetLength(0); y++)
-                    matrix[y, z] = matrix[y, z - 1];
-        }
-
-        /// <summary>
         /// Keyboard release processing
         /// </summary>
         /// <param name="parKey">Key</param>
@@ -184,6 +200,12 @@ namespace TetrisLogic
                     case Keys.Left:
                         Piece.Left(matrix);
                         break;
+                    case Keys.Up:
+                        Piece.Rotate(matrix);
+                        break;
+                    case Keys.Down:
+                        Piece.Speed = 0.015f;
+                        break;
                 }
         }
 
@@ -195,21 +217,6 @@ namespace TetrisLogic
         {
             if (Game && parKey == Keys.Down)
                 Piece.Speed = 0.35f;
-        }
-
-        /// <summary>
-        /// Resetting the playing field
-        /// </summary>
-        public static void Reset()
-        {
-            color = Color.White;
-            for (int i = 0; i < WIDTH; i++)
-                for (int j = 0; j < HEIGHT; j++)
-                    matrix[i, j] = false;
-            Game = true;
-            GameOver = false;
-            Up = false;
-            Piece.Reset(WIDTH);
         }
     }
 }
