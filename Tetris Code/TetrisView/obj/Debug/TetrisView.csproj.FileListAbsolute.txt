@@ -1,0 +1,17 @@
+C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code\TetrisView\bin\Debug\TetrisView.exe.config
+C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code\TetrisView\bin\Debug\TetrisView.exe
+C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code\TetrisView\bin\Debug\TetrisView.pdb
+C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code\TetrisView\bin\Debug\TetrisLogic.dll
+C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code\TetrisView\bin\Debug\TetrisLogic.pdb
+C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\TetrisView.csprojAssemblyReference.cache
+C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\MainWindow.baml
+C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\MainWindow.g.cs
+C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\App.g.cs
+C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\TetrisView_MarkupCompile.cache
+C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\TetrisView.g.resources
+C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\TetrisView.Properties.Resources.resources
+C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\TetrisView.csproj.GenerateResource.cache
+C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\TetrisView.csproj.CoreCompileInputs.cache
+C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\TetrisView.csproj.CopyComplete
+C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\TetrisView.exe
+C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\TetrisView.pdb
