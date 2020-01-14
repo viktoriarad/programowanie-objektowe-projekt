@@ -110,5 +110,67 @@ namespace TetrisTest
 
             Assert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        // Test the method of game field key down
+        public void TestMethodGameFieldKeyUp()
+        {
+            Piece.Create();
+
+            float expected = 0.015f;
+            GameField.Reset();
+            GameField.KeyDown(System.Windows.Forms.Keys.Down);
+            GameField.KeyUp(System.Windows.Forms.Keys.Down);
+
+            float actual = Piece.Speed;
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        // Test the method of setting input bounds
+        public void TestMethodInputSetBounds()
+        {
+            Input input = new Input();
+            input.SetBounds(new PointF(100, 200), new SizeF(300, 40));
+            SizeF expectedSize = new SizeF(300, 40);
+
+            SizeF actualSize = input.Size;
+
+            Assert.AreEqual(expectedSize, actualSize);
+        }
+
+        [TestMethod]
+        // Test the method of input backspace
+        public void TestMethodInputBackspace()
+        {
+            string expected = "He";
+            Input input = new Input();
+
+            input.Push('H');
+            input.Push('e');
+            input.Push('l');
+            input.Backspace();
+
+            string actual = input.Text;
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        // Test the method of setting panel bounds
+        public void TestMethodPanelSetBounds()
+        {
+            Panel panel = new Panel("Panel");
+            panel.SetBounds(new PointF(100, 200), new SizeF(300, 40));
+
+            SizeF expectedSize = new SizeF(300, 40);
+            PointF expectedPosition = new PointF(100, 200);
+
+            SizeF actualSize = panel.Size;
+            PointF actualPosition = panel.Posistion;
+
+            Assert.AreEqual(expectedSize, actualSize);
+            Assert.AreEqual(actualPosition, expectedPosition);
+        }
     }
 }

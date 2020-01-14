@@ -15,3 +15,20 @@ C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code
 C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\TetrisView.csproj.CopyComplete
 C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\TetrisView.exe
 C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\TetrisView.pdb
+D:\all project\programowanie-objektowe-projekt\Tetris Code\TetrisView\bin\Debug\TetrisView.exe.config
+D:\all project\programowanie-objektowe-projekt\Tetris Code\TetrisView\bin\Debug\TetrisView.exe
+D:\all project\programowanie-objektowe-projekt\Tetris Code\TetrisView\bin\Debug\TetrisView.pdb
+D:\all project\programowanie-objektowe-projekt\Tetris Code\TetrisView\bin\Debug\TetrisLogic.dll
+D:\all project\programowanie-objektowe-projekt\Tetris Code\TetrisView\bin\Debug\TetrisLogic.pdb
+D:\all project\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\TetrisView.csprojAssemblyReference.cache
+D:\all project\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\MainWindow.baml
+D:\all project\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\MainWindow.g.cs
+D:\all project\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\App.g.cs
+D:\all project\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\TetrisView_MarkupCompile.cache
+D:\all project\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\TetrisView.g.resources
+D:\all project\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\TetrisView.Properties.Resources.resources
+D:\all project\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\TetrisView.csproj.GenerateResource.cache
+D:\all project\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\TetrisView.csproj.CopyComplete
+D:\all project\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\TetrisView.exe
+D:\all project\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\TetrisView.pdb
+D:\all project\programowanie-objektowe-projekt\Tetris Code\TetrisView\bin\Debug\TetrisLogic.xml
