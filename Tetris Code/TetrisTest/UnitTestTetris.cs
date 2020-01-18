@@ -172,5 +172,73 @@ namespace TetrisTest
             Assert.AreEqual(expectedSize, actualSize);
             Assert.AreEqual(actualPosition, expectedPosition);
         }
+
+        [TestMethod]
+        // Test the method of move piece down
+        public void TestMethodPieceMoveDown()
+        {
+            Piece.Create();
+            GameField.Reset();
+            PointF expected = Piece.Position;
+            expected.Y += 0.3f;
+            bool[,] matrix = new bool[10, 20];
+            Array.Clear(matrix, 0, matrix.Length);
+
+            Piece.Down(matrix, 20);
+
+            PointF actual = Piece.Position;
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        // Test the method of move right piece
+        public void TestMethodPieceMoveRight()
+        {
+            Piece.Create();
+            GameField.Reset();
+            PointF expected = Piece.Position;
+            expected.X += 1f;
+            bool[,] matrix = new bool[10, 20];
+            Array.Clear(matrix, 0, matrix.Length);
+
+            Piece.Right(matrix);
+
+            PointF actual = Piece.Position;
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        // Test the method of move right piece
+        public void TestMethodPieceMoveLeft()
+        {
+            Piece.Create();
+            GameField.Reset();
+            PointF expected = Piece.Position;
+            expected.X -= 1f;
+            bool[,] matrix = new bool[10, 20];
+            Array.Clear(matrix, 0, matrix.Length);
+
+            Piece.Left(matrix);
+
+            PointF actual = Piece.Position;
+
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        // Test the method of renderer pause
+        public void TestMethodRendererPause()
+        {
+            Piece.Create();
+            Renderer.Create();
+
+            float expected = 0;
+            Renderer.Pause();
+
+            float actual = Piece.Speed;
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
