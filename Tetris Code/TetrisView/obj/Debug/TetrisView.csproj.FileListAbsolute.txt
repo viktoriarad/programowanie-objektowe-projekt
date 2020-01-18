@@ -32,3 +32,4 @@ D:\all project\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\
 D:\all project\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\TetrisView.exe
 D:\all project\programowanie-objektowe-projekt\Tetris Code\TetrisView\obj\Debug\TetrisView.pdb
 D:\all project\programowanie-objektowe-projekt\Tetris Code\TetrisView\bin\Debug\TetrisLogic.xml
+C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code\TetrisView\bin\Debug\TetrisLogic.xml
