@@ -1,6 +1,5 @@
 C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code\TetrisLogic\bin\Debug\TetrisLogic.dll
 C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code\TetrisLogic\bin\Debug\TetrisLogic.pdb
-C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code\TetrisLogic\obj\Debug\TetrisLogic.csprojAssemblyReference.cache
 C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code\TetrisLogic\obj\Debug\TetrisLogic.GameCanvas.resources
 C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code\TetrisLogic\obj\Debug\TetrisLogic.csproj.GenerateResource.cache
 C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code\TetrisLogic\obj\Debug\TetrisLogic.csproj.CoreCompileInputs.cache
@@ -14,3 +13,4 @@ D:\all project\programowanie-objektowe-projekt\Tetris Code\TetrisLogic\obj\Debug
 D:\all project\programowanie-objektowe-projekt\Tetris Code\TetrisLogic\obj\Debug\TetrisLogic.dll
 D:\all project\programowanie-objektowe-projekt\Tetris Code\TetrisLogic\obj\Debug\TetrisLogic.pdb
 D:\all project\programowanie-objektowe-projekt\Tetris Code\TetrisLogic\bin\Debug\TetrisLogic.xml
+C:\Users\User\Denis\vika oop c sharp\programowanie-objektowe-projekt\Tetris Code\TetrisLogic\bin\Debug\TetrisLogic.xml

@@ -1,0 +1,645 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>TetrisLogic</name>
+    </assembly>
+    <members>
+        <member name="T:TetrisLogic.Button">
+            <summary>
+            Buttton
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.Button.onClick">
+            <summary>
+            Click function
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.Button.FONT_SIZE">
+            <summary>
+            Text font size
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.Button.Text">
+            <summary>
+            Button text
+            </summary>
+        </member>
+        <member name="T:TetrisLogic.Button.dСauseClick">
+            <summary>
+            Delegate for click function
+            </summary>
+        </member>
+        <member name="P:TetrisLogic.Button.Posistion">
+            <summary>
+            Button position
+            </summary>
+        </member>
+        <member name="P:TetrisLogic.Button.Size">
+            <summary>
+            Buttion size
+            </summary>
+        </member>
+        <member name="M:TetrisLogic.Button.#ctor(System.String,TetrisLogic.Button.dСauseClick)">
+            <summary>
+            Button class constructor
+            </summary>
+            <param name="parText">Button text</param>
+            <param name="parOnClick">Click function</param>
+        </member>
+        <member name="M:TetrisLogic.Button.SetBounds(System.Drawing.PointF,System.Drawing.SizeF)">
+            <summary>
+            Setting the position and size of the button
+            </summary>
+            <param name="parPos">Button position</param>
+            <param name="parSize">Buttion size</param>
+        </member>
+        <member name="M:TetrisLogic.Button.Click(System.Drawing.Point)">
+            <summary>
+            Click function call
+            </summary>
+            <param name="parMousePos">Mouse position</param>
+        </member>
+        <member name="M:TetrisLogic.Button.Update(System.Drawing.Graphics,System.Drawing.Point,System.Drawing.SizeF)">
+            <summary>
+            Button update function
+            </summary>
+            <param name="refGraphics">Graphics</param>
+            <param name="parMousePos">Mouse position</param>
+            <param name="parGraphicsSize">Graphics size</param>
+        </member>
+        <member name="M:TetrisLogic.Button.MouseOn(System.Drawing.Point)">
+            <summary>
+            Mouse hover function
+            </summary>
+            <param name="parMousePos"></param>
+            <returns></returns>
+        </member>
+        <member name="T:TetrisLogic.GameCanvas">
+            <summary>
+            Drawing
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.GameCanvas.prewTime">
+            <summary>
+            Previous frame time
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.GameCanvas.deltaTime">
+            <summary>
+            Time between frames
+            </summary>
+        </member>
+        <member name="M:TetrisLogic.GameCanvas.#ctor">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+        <member name="M:TetrisLogic.GameCanvas.GameCanvas_Paint(System.Object,System.Windows.Forms.PaintEventArgs)">
+            <summary>
+            Game rendering
+            </summary>
+            <param name="refSender">Event sender</param>
+            <param name="e">Parameners</param>
+        </member>
+        <member name="M:TetrisLogic.GameCanvas.GameCanvas_KeyUp(System.Object,System.Windows.Forms.KeyEventArgs)">
+            <summary>
+            Keyboard release processing
+            </summary>
+            <param name="refSender">Event sender</param>
+            <param name="parE">Parameters</param>
+        </member>
+        <member name="M:TetrisLogic.GameCanvas.GameCanvas_KeyDown(System.Windows.Forms.Keys)">
+            <summary>
+            Keyboard рandling
+            </summary>
+            <param name="key">Key</param>
+        </member>
+        <member name="M:TetrisLogic.GameCanvas.GameCanvas_MouseMove(System.Object,System.Windows.Forms.MouseEventArgs)">
+            <summary>
+            Mouse movement processing
+            </summary>
+            <param name="ferSender">Event sender</param>
+            <param name="parE">Parameters</param>
+        </member>
+        <member name="M:TetrisLogic.GameCanvas.GameCanvas_Click(System.Object,System.EventArgs)">
+            <summary>
+            Click processing
+            </summary>
+            <param name="refSender">Event sender</param>
+            <param name="parE">Parameters</param>
+        </member>
+        <member name="M:TetrisLogic.GameCanvas.GameCanvas_KeyPress(System.Object,System.Windows.Forms.KeyPressEventArgs)">
+            <summary>
+            Keyboard processing(characters)
+            </summary>
+            <param name="refSender">Event sender</param>
+            <param name="parE">Parameters</param>
+        </member>
+        <member name="F:TetrisLogic.GameCanvas.components">
+            <summary>
+            Window components
+            </summary>
+        </member>
+        <member name="M:TetrisLogic.GameCanvas.Dispose(System.Boolean)">
+            <summary>
+            Dispose window
+            </summary>
+            <param name="disposing"></param>
+        </member>
+        <member name="M:TetrisLogic.GameCanvas.InitializeComponent">
+            <summary> 
+            Initialize window components
+            </summary>
+        </member>
+        <member name="T:TetrisLogic.Input">
+            <summary>
+            Entry field
+            </summary>
+        </member>
+        <member name="P:TetrisLogic.Input.Position">
+            <summary>
+            Entry field position
+            </summary>
+        </member>
+        <member name="P:TetrisLogic.Input.Text">
+            <summary>
+            Entry field text
+            </summary>
+        </member>
+        <member name="P:TetrisLogic.Input.Size">
+            <summary>
+            Entry field size
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.Input.FONT_SIZE">
+            <summary>
+            Entry field font size
+            </summary>
+        </member>
+        <member name="M:TetrisLogic.Input.#ctor">
+            <summary>
+            Constructor class entry field
+            </summary>
+        </member>
+        <member name="M:TetrisLogic.Input.SetBounds(System.Drawing.PointF,System.Drawing.SizeF)">
+            <summary>
+            Setting the position and size of the entry field
+            </summary>
+            <param name="parPosition">Entry field position</param>
+            <param name="parSize">Entry field size</param>
+        </member>
+        <member name="M:TetrisLogic.Input.Push(System.Char)">
+            <summary>
+            Enter character
+            </summary>
+            <param name="parKey">Character</param>
+        </member>
+        <member name="M:TetrisLogic.Input.Backspace">
+            <summary>
+            Erase a single character
+            </summary>
+        </member>
+        <member name="M:TetrisLogic.Input.Update(System.Drawing.Graphics,System.Drawing.SizeF)">
+            <summary>
+            Input field update
+            </summary>
+            <param name="refGraphics">Graphics</param>
+            <param name="parGraphicsSize">Graphics size</param>
+        </member>
+        <member name="T:TetrisLogic.Panel">
+            <summary>
+            Panel
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.Panel.text">
+            <summary>
+            Panel title
+            </summary>
+        </member>
+        <member name="P:TetrisLogic.Panel.Posistion">
+            <summary>
+            Panel position
+            </summary>
+        </member>
+        <member name="P:TetrisLogic.Panel.Size">
+            <summary>
+            Panel size
+            </summary>
+        </member>
+        <member name="M:TetrisLogic.Panel.#ctor(System.String)">
+            <summary>
+            Constructor class panel
+            </summary>
+            <param name="parText">Panel title</param>
+        </member>
+        <member name="M:TetrisLogic.Panel.SetBounds(System.Drawing.PointF,System.Drawing.SizeF)">
+            <summary>
+            Setting the position and size of the panel
+            </summary>
+            <param name="parPos">Panel position</param>
+            <param name="parSize">Panel size</param>
+        </member>
+        <member name="M:TetrisLogic.Panel.Update(System.Drawing.Graphics,System.Boolean)">
+            <summary>
+            Panel update function
+            </summary>
+            <param name="graphics">Graphics</param>
+            <param name="parCenter">Center element or not</param>
+        </member>
+        <member name="T:TetrisLogic.Renderer">
+            <summary>
+            Game handler
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.Renderer.mousePos">
+            <summary>
+            Mouse position
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.Renderer.buttonPlay">
+            <summary>
+            Play button
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.Renderer.buttonPause">
+            <summary>
+            Pause button
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.Renderer.buttonExit">
+            <summary>
+            Exit button
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.Renderer.buttonScores">
+            <summary>
+            Menu button
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.Renderer.buttonRestart">
+            <summary>
+            Restart button
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.Renderer.panelGameOver">
+            <summary>
+            dashboard
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.Renderer.panelPause">
+            <summary>
+            Pause panel
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.Renderer.userName">
+            <summary>
+            Player name input field
+            </summary>
+        </member>
+        <member name="P:TetrisLogic.Renderer.GraphicsSize">
+            <summary>
+            Graphics size
+            </summary>
+        </member>
+        <member name="P:TetrisLogic.Renderer.Score">
+            <summary>
+            Score
+            </summary>
+        </member>
+        <member name="P:TetrisLogic.Renderer.ScoresVisible">
+            <summary>
+            Score visibility
+            </summary>
+        </member>
+        <member name="P:TetrisLogic.Renderer.PauseVisible">
+            <summary>
+            Pause visibility
+            </summary>
+        </member>
+        <member name="P:TetrisLogic.Renderer.Scores">
+            <summary>
+            Scores
+            </summary>
+        </member>
+        <member name="M:TetrisLogic.Renderer.Create">
+            <summary>
+            Initializing game objects
+            </summary>
+        </member>
+        <member name="M:TetrisLogic.Renderer.Update(System.Drawing.Graphics)">
+            <summary>
+            Frame update
+            </summary>
+            <param name="refGraphics">Graphics</param>
+        </member>
+        <member name="M:TetrisLogic.Renderer.KeyChar(System.Char)">
+            <summary>
+            Receive character from keyboard
+            </summary>
+            <param name="parChar">Character</param>
+        </member>
+        <member name="M:TetrisLogic.Renderer.StartGame">
+            <summary>
+            Game start
+            </summary>
+        </member>
+        <member name="M:TetrisLogic.Renderer.AddScore">
+            <summary>
+            Adding a highscore
+            </summary>
+        </member>
+        <member name="M:TetrisLogic.Renderer.ShowScores">
+            <summary>
+            High scores
+            </summary>
+        </member>
+        <member name="M:TetrisLogic.Renderer.Exit">
+            <summary>
+            Quit the game
+            </summary>
+        </member>
+        <member name="M:TetrisLogic.Renderer.Pause">
+            <summary>
+            Pause
+            </summary>
+        </member>
+        <member name="M:TetrisLogic.Renderer.Restart">
+            <summary>
+            Restart
+            </summary>
+        </member>
+        <member name="M:TetrisLogic.Renderer.DrawString(System.Drawing.Graphics,System.String,System.Single,System.Single,System.Single,System.Single,System.Single,System.Boolean,System.Boolean)">
+            <summary>
+            Text drawing
+            </summary>
+            <param name="refGraphics">Graphics</param>
+            <param name="parText">Text</param>
+            <param name="parX">X position</param>
+            <param name="parY">Y position</param>
+            <param name="parW">Width</param>
+            <param name="parH">Height</param>
+            <param name="parS">Font size</param>
+            <param name="parC">Center or not</param>
+            <param name="parNeg">Negtive color or not</param> 
+        </member>
+        <member name="M:TetrisLogic.Renderer.MousePos(System.Drawing.Point)">
+            <summary>
+            Get mouse position
+            </summary>
+            <param name="parPos">Mouse position</param>
+        </member>
+        <member name="M:TetrisLogic.Renderer.Click">
+            <summary>
+            Click
+            </summary>
+        </member>
+        <member name="M:TetrisLogic.Renderer.KeyDown(System.Windows.Forms.Keys)">
+            <summary>
+            Keyboard handling
+            </summary>
+            <param name="parKey">Key</param>
+        </member>
+        <member name="M:TetrisLogic.Renderer.LoadScores">
+            <summary>
+            Load highscores
+            </summary>
+        </member>
+        <member name="M:TetrisLogic.Renderer.SaveScores">
+            <summary>
+            Save highscores
+            </summary>
+        </member>
+        <member name="T:TetrisLogic.GameField">
+            <summary>
+            Playing field
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.GameField.cellSize">
+            <summary>
+            Cell size
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.GameField.prewTime">
+            <summary>
+            Previous frame time
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.GameField.deltaTime">
+            <summary>
+            Time between frames
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.GameField.matrix">
+            <summary>
+            Matrix
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.GameField.lines">
+            <summary>
+            Lines marked for deletion
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.GameField.color">
+            <summary>
+            Color of delete lines
+            </summary>
+        </member>
+        <member name="P:TetrisLogic.GameField.GameOver">
+            <summary>
+            End of the game
+            </summary>
+        </member>
+        <member name="P:TetrisLogic.GameField.Game">
+            <summary>
+            Is the game currently happening
+            </summary>
+        </member>
+        <member name="P:TetrisLogic.GameField.Up">
+            <summary>
+            Element drop animation
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.GameField.WIDTH">
+            <summary>
+            Playing field width
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.GameField.HEIGHT">
+            <summary>
+            Playing field height
+            </summary>
+        </member>
+        <member name="M:TetrisLogic.GameField.#cctor">
+            <summary>
+            Constructor class playing field
+            </summary>
+        </member>
+        <member name="M:TetrisLogic.GameField.Reset">
+            <summary>
+            Resetting the playing field
+            </summary>
+        </member>
+        <member name="M:TetrisLogic.GameField.Update(System.Drawing.Graphics,System.Drawing.SizeF)">
+            <summary>
+            Game board update
+            </summary>
+            <param name="refGraphics">Graphics</param>
+            <param name="parSize">Graphics size</param>
+        </member>
+        <member name="M:TetrisLogic.GameField.MoveDown(System.Int32)">
+            <summary>
+            Shift cells when deleting a row
+            </summary>
+            <param name="parNum">Number of steps</param>
+        </member>
+        <member name="M:TetrisLogic.GameField.SearchLines">
+            <summary>
+            Search for filled strings
+            </summary>
+        </member>
+        <member name="M:TetrisLogic.GameField.KeyUp(System.Windows.Forms.Keys)">
+            <summary>
+            Keyboard release processing
+            </summary>
+            <param name="parKey">Key</param>
+        </member>
+        <member name="M:TetrisLogic.GameField.KeyDown(System.Windows.Forms.Keys)">
+            <summary>
+            Keyboard handling
+            </summary>
+            <param name="parKey">Key</param>
+        </member>
+        <member name="T:TetrisLogic.Piece">
+            <summary>
+            Piece of tetris
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.Piece.dPosition">
+            <summary>
+            Draw position
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.Piece.points">
+            <summary>
+            Piece of tetris cells
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.Piece.numPoints">
+            <summary>
+            Tetris figure type number
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.Piece.random">
+            <summary>
+            Random number generator
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.Piece.pointsVariants">
+            <summary>
+            All kinds of tetris figures
+            </summary>
+        </member>
+        <member name="F:TetrisLogic.Piece.rot">
+            <summary>
+            Shift(right / left)
+            </summary>
+        </member>
+        <member name="P:TetrisLogic.Piece.Position">
+            <summary>
+            Piece of tetris position
+            </summary>
+        </member>
+        <member name="P:TetrisLogic.Piece.EndAnim">
+            <summary>
+            Is the animation finished
+            </summary>
+        </member>
+        <member name="P:TetrisLogic.Piece.Speed">
+            <summary>
+            Down speed
+            </summary>
+        </member>
+        <member name="M:TetrisLogic.Piece.Create">
+            <summary>
+            Creating all kinds of tetris shapes and other objects
+            </summary>
+        </member>
+        <member name="M:TetrisLogic.Piece.Reset(System.Int32)">
+            <summary>
+            Reset
+            </summary>
+            <param name="parWidth">Game board width</param>
+        </member>
+        <member name="M:TetrisLogic.Piece.Update(System.Boolean[0:,0:],System.Drawing.Graphics,System.Drawing.SizeF)">
+            <summary>
+            Tetris figure updates
+            </summary>
+            <param name="refMatrix">Matrix of game board</param>
+            <param name="refGraphics">Graphics></param>
+            <param name="parCellSize">Graphics size</param>
+        </member>
+        <member name="M:TetrisLogic.Piece.CanRight(System.Boolean[0:,0:],System.Drawing.PointF,System.Drawing.Point[][])">
+            <summary>
+            The ability to shift the tetris shape to the right
+            </summary>
+            <param name="refMatrix">Matrix of game board</param>
+            <param name="parPos">Position</param>
+            <param name="refPoints">Points of tetris shape</param>
+            <returns></returns>
+        </member>
+        <member name="M:TetrisLogic.Piece.CanLeft(System.Boolean[0:,0:],System.Drawing.PointF,System.Drawing.Point[][])">
+            <summary>
+            The ability to shift the tetris shape to the left
+            </summary>
+            <param name="refMatrix">Matrix of game board</param>
+            <param name="parPos">Position</param>
+            <param name="refPoints">Points of tetris shape</param>
+            <returns></returns>
+        </member>
+        <member name="M:TetrisLogic.Piece.Right(System.Boolean[0:,0:])">
+            <summary>
+            Right shift
+            </summary>
+            <param name="refMatrix">Matrix of game board</param>
+        </member>
+        <member name="M:TetrisLogic.Piece.Left(System.Boolean[0:,0:])">
+            <summary>
+            Left shift
+            </summary>
+            <param name="refMatrix">Matrix of game board</param>
+        </member>
+        <member name="M:TetrisLogic.Piece.Down(System.Boolean[0:,0:],System.Single)">
+            <summary>
+            Shift down
+            </summary>
+            <param name="refMatrix">Matrix of game board</param>
+            <param name="parDeltaTime">Time between frames</param>
+            <returns></returns>
+        </member>
+        <member name="M:TetrisLogic.Piece.Stop(System.Boolean[0:,0:])">
+            <summary>
+            Overflow check
+            </summary>
+            <param name="refMatrix">Matrix of game board</param>
+            <returns></returns>
+        </member>
+        <member name="M:TetrisLogic.Piece.Rotate(System.Boolean[0:,0:])">
+            <summary>
+            Figure rotation
+            </summary>
+            <param name="refMatrix">Matrix of game board</param>
+        </member>
+        <member name="M:TetrisLogic.Piece.MaxY">
+            <summary>
+            Lowest cell
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:TetrisLogic.Piece.MaxX">
+            <summary>
+            Rightmost cell
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>
