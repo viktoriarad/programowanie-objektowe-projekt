@@ -191,7 +191,14 @@ namespace TetrisLogic
         /// <param name="parChar">Character</param>
         public static void KeyChar(char parChar)
         {
-            userName.Push(parChar);
+            if (GameField.GameOver) { 
+                if (parChar == (char)13)
+                {
+                    ShowScores();
+                    return;
+                }
+                userName.Push(parChar);
+            }
         }
 
         /// <summary>
@@ -227,6 +234,8 @@ namespace TetrisLogic
                         break;
                     }
                 }
+
+            Score = 0;
         }
 
         /// <summary>
